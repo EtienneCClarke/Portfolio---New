@@ -26,9 +26,8 @@ export function PillNav() {
       >
         <OccCorners />
         <ul data-pill-full="" className={s['pill-nav__list']}>
-          <li><a href="#" className={`${s['pill-nav__link']} ${s['pill-nav__link--name']}`} onClick={scene.toTop}>Etienne Cellier‑Clarke</a></li>
-          <li><a href="#work" className={s['pill-nav__link']} onClick={scene.onNav}>Case Studies</a></li>
-          <li><a href="#services" className={s['pill-nav__link']} onClick={scene.onNav}>Services</a></li>
+          <li><a href="#" className={`${s['pill-nav__link']} ${s['pill-nav__link--name']}`} onClick={scene.toTop}>Etienne Cellier-Clarke</a></li>
+          <li><a href="#work" className={s['pill-nav__link']} onClick={scene.onNav}>My Work</a></li>
           <li><a href="#contact" className={`${s['pill-nav__link']} ${s['pill-nav__link--cta']}`} onClick={scene.onNav}>Contact</a></li>
         </ul>
       </nav>

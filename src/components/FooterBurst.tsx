@@ -3,11 +3,19 @@
 import { CONTACT } from '@/content/home';
 import { useHome } from './HomeContext';
 import s from './FooterBurst.module.css';
+import { useMemo } from 'react';
 
 const WORDS = ['Tell', 'me', 'what', 'you’re', 'building.'];
 
 export function FooterBurst() {
+
   const { stage } = useHome();
+
+  const currentYear = useMemo(() => {
+    const now = new Date();
+    return now.getFullYear();
+  }, [])
+
   return (
     <section id="contact" data-act="contact" data-enter="collapse" data-span="1.9" data-on-amber="" aria-labelledby="contact-h"
       className={s['footer-burst']} style={{ zIndex: 7, height: stage ? '240vh' : 'auto', marginTop: stage ? '-240vh' : '0' }}>
@@ -33,8 +41,8 @@ export function FooterBurst() {
           </div>
         </div>
         <footer className={s['footer-burst__footer']}>
-          <span>Available now. Manchester, UK.</span>
-          <span>© 2026 Etienne Cellier‑Clarke</span>
+          <span>British engineer based in Sydney.</span>
+          <span>© {currentYear} Etienne Cellier-Clarke</span>
         </footer>
       </div>
     </section>
