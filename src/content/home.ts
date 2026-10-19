@@ -59,7 +59,7 @@ export const STATEMENT_SEQ: StatementItem[] = [
 ];
 
 export const CONTACT = {
-  email: 'etienne@arkcel.com',
+  email: 'ecellierclarke@gmail.com',
   // Contact is mailto-only for now. Add a LinkedIn URL here and the footer shows a LinkedIn button.
   linkedin: '',
   caseStudyUrl: 'https://www.arkcel.com/our-work',
@@ -75,7 +75,7 @@ export const ROWS: [string, string[]][] = [
   ['Other', ['Stripe', 'Vision Camera', 'React-Vision']],
 ];
 
-export const LAYERS: [string, string][] = [['Client', 'Interface'], ['Server', 'Server'], ['Data', 'Data'], ['Infra', 'Infrastructure'], ['Chain', 'On-chain']];
+export const LAYERS: [string, string][] = [['Client', 'Interface'], ['Server', 'Server'], ['Data', 'Data'], ['Infra', 'Infrastructure']];
 
 export const PROFILE = {
   ctx: 'Profile',
