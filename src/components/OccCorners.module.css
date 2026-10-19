@@ -1,0 +1,5 @@
+.occ-corners { position: absolute; width: 0; height: 0; pointer-events: none; }
+.occ-corners--tl { left: 0; top: 0; }
+.occ-corners--tr { left: 100%; top: 0; }
+.occ-corners--br { left: 100%; top: 100%; }
+.occ-corners--bl { left: 0; top: 100%; }

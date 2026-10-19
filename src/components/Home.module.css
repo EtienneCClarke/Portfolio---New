@@ -1,0 +1,10 @@
+.home { background: #131414; color: #EDEBE6; font-family: var(--font-display); }
+
+.home__skip { position: absolute; left: -9999px; top: 12px; z-index: 80; background: #E8A33A; color: #131414; padding: 10px 14px; font-family: var(--font-mono); font-size: 13px; }
+.home__skip:focus { left: 12px; }
+.home__skip:hover { color: #131414; }
+
+.home__chrome { display: contents; }
+.home__main { display: block; min-width: 0; padding-bottom: 0; }
+.home__work { position: relative; }
+.home__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }

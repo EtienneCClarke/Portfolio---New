@@ -1,0 +1,2 @@
+.scroll-depth { position: fixed; top: 0; bottom: 0; right: 0; width: 2px; z-index: 118; pointer-events: none; background: rgba(237, 235, 230, 0.1); transition: background 300ms ease; }
+.scroll-depth__fill { position: absolute; inset: 0; background: #E8A33A; transform-origin: 50% 0%; transform: scaleY(0); transition: background 300ms ease; }

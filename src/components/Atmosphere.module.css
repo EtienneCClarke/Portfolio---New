@@ -1,0 +1,24 @@
+.atmosphere__grain { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 190; opacity: 0.07; mix-blend-mode: overlay; }
+.atmosphere__noise {
+  position: absolute; inset: -20%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: atmosphere-grain 900ms steps(6) infinite;
+}
+.atmosphere__vignette { position: fixed; inset: 0; pointer-events: none; z-index: 189; background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0, 0, 0, 0.38) 100%); }
+.atmosphere { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 188; mix-blend-mode: screen; opacity: 0; transition: opacity 900ms ease; }
+.atmosphere__a { will-change: transform; position: absolute; left: 0; top: 0; width: 100vmax; height: 100vmax; margin: -50vmax 0 0 -50vmax; background: radial-gradient(circle, rgba(232, 163, 58, 0.15) 0%, rgba(232, 163, 58, 0.06) 30%, rgba(232, 163, 58, 0.015) 50%, transparent 66%); }
+.atmosphere__b { will-change: transform; position: absolute; left: 0; top: 0; width: 90vmax; height: 90vmax; margin: -45vmax 0 0 -45vmax; background: radial-gradient(circle, rgba(170, 180, 190, 0.09) 0%, rgba(170, 180, 190, 0.03) 35%, transparent 62%); }
+.atmosphere__beam { position: absolute; left: 50%; top: -60vh; width: 44vw; height: 220vh; margin-left: -22vw; transform-origin: 50% 0%; background: linear-gradient(90deg, transparent 0%, rgba(237, 235, 230, 0.018) 25%, rgba(237, 235, 230, 0.045) 50%, rgba(237, 235, 230, 0.018) 75%, transparent 100%); }
+.atmosphere__beam2 { position: absolute; left: 50%; top: -60vh; width: 18vw; height: 220vh; margin-left: -9vw; transform-origin: 50% 0%; background: linear-gradient(90deg, transparent 0%, rgba(232, 163, 58, 0.04) 50%, transparent 100%); }
+
+[data-lite='on'] .atmosphere__grain { display: none; }
+[data-lite='on'] .atmosphere { mix-blend-mode: normal; }
+
+@keyframes atmosphere-grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-6%, 4%); }
+  40% { transform: translate(5%, -7%); }
+  60% { transform: translate(-3%, 8%); }
+  80% { transform: translate(7%, 2%); }
+  100% { transform: translate(0, 0); }
+}

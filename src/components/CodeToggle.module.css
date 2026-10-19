@@ -1,0 +1,29 @@
+.code-toggle { position: relative; flex: none; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+[data-scene='on'] .code-toggle { flex: 1 1 0; }
+
+/* Dashboard screenshot: under the code on tablet and phone, framed and offset behind it on desktop */
+.code-toggle__shot { position: relative; order: 2; flex: none; aspect-ratio: 1818 / 780; overflow: hidden; border: 1px solid #2B2C2C; background: #161717; }
+[data-scene='on'] .code-toggle__shot { aspect-ratio: auto; height: clamp(72px, 16vh, 180px); }
+[data-case='wide'] .code-toggle__shot {
+  position: absolute; inset: 0; order: 0; height: auto; aspect-ratio: auto; opacity: 0.5;
+  transform: translate(clamp(16px, 2.4vw, 36px), clamp(16px, 2.4vw, 36px));
+}
+.code-toggle__shot-img { object-fit: cover; object-position: top left; }
+
+.code-toggle__panel { position: relative; z-index: 1; flex: none; min-height: 0; margin: 0; border: 1px solid #2B2C2C; background: #161717; display: flex; flex-direction: column; overflow: hidden; }
+[data-scene='on'] .code-toggle__panel { flex: 1 1 0; }
+
+.code-toggle__caption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding: 8px 10px 8px 18px; border-bottom: 1px solid #2B2C2C; font-family: var(--font-mono); font-size: 11px; color: #85837E; }
+.code-toggle__group { display: flex; border: 1px solid #3A3B3B; border-radius: 2px; }
+.code-toggle__button { min-height: 40px; padding: 0 14px; border: 0; background: transparent; color: #A3A19C; font-family: var(--font-mono); font-size: 11px; cursor: pointer; transition: background 200ms ease, color 200ms ease; }
+.code-toggle__button[aria-pressed='true'] { background: #EDEBE6; color: #131414; }
+
+.code-toggle__pre { margin: 0; padding: 20px 18px; overflow: auto; flex: 1 1 auto; font-family: var(--font-mono); font-size: clamp(12px, 0.95vw, 14px); line-height: 1.75; color: #D9D6D0; }
+.code-toggle__line { display: grid; }
+.code-toggle__code, .code-toggle__plain { grid-area: 1 / 1; transition: opacity 280ms ease var(--d), filter 280ms ease var(--d); }
+.code-toggle__code { white-space: pre-wrap; overflow-wrap: anywhere; opacity: 1; filter: blur(0px); }
+[data-case='wide'] .code-toggle__code { white-space: pre; }
+.code-toggle__comment { color: #85837E; }
+.code-toggle__plain { font-family: var(--font-display); font-size: 1.08em; color: #EDEBE6; opacity: 0; filter: blur(4px); }
+.code-toggle--plain .code-toggle__code { opacity: 0; filter: blur(4px); }
+.code-toggle--plain .code-toggle__plain { opacity: 1; filter: blur(0px); }

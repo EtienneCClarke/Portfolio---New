@@ -1,0 +1,31 @@
+.footer-burst { position: relative; }
+
+.footer-burst__layer {
+  contain: layout paint; will-change: clip-path, opacity; position: relative; top: 0; left: 0; right: 0; bottom: 0; min-height: 100vh; box-sizing: border-box;
+  background: #E8A33A; color: #131414; z-index: 50; display: flex; flex-direction: column; padding: clamp(40px, 11vh, 140px) clamp(20px, 4vw, 56px) 0;
+}
+[data-scene='on'] .footer-burst__layer { position: fixed; clip-path: circle(0% at 50% 50%); opacity: 0; }
+
+.footer-burst__inner { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; }
+.footer-burst__title { font-size: clamp(44px, min(7.4vw, 11vh), 124px); line-height: 0.94; letter-spacing: -0.045em; font-weight: 600; margin: 0; max-width: 10em; text-wrap: balance; }
+.footer-burst__word-mask { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.14em 0.1em 0.1em; margin: -0.14em -0.1em -0.1em; }
+.footer-burst__word { display: inline-block; }
+
+.footer-burst__row { display: flex; flex-wrap: wrap; gap: 36px 64px; justify-content: space-between; align-items: flex-end; }
+.footer-burst__email-block { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.footer-burst__label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer-burst__email { color: #131414; font-size: clamp(24px, 3vw, 44px); font-weight: 500; letter-spacing: -0.02em; text-underline-offset: 6px; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+.footer-burst__email:hover { color: #131414; text-decoration-thickness: 3px; }
+
+.footer-burst__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.footer-burst__cta { background: #131414; color: #E8A33A; padding: 15px 22px; font-weight: 600; font-size: 16px; text-decoration: none; border-radius: 2px; transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1); }
+.footer-burst__cta:hover { color: #FFFFFF; }
+.footer-burst__cta:active { transform: scale(0.97); }
+.footer-burst__ghost { border: 1px solid #131414; color: #131414; padding: 14px 21px; font-size: 16px; text-decoration: none; border-radius: 2px; transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1); }
+.footer-burst__ghost:hover { color: #131414; background: rgba(19, 20, 20, 0.08); }
+.footer-burst__ghost:active { transform: scale(0.97); }
+
+.footer-burst__footer {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 32px; margin-top: clamp(24px, 5vh, 80px);
+  padding: clamp(14px, 2.4vh, 20px) 0 24px; border-top: 1px solid rgba(19, 20, 20, 0.35); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em;
+}
